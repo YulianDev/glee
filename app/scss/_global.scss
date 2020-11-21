@@ -1,5 +1,32 @@
-
-
+  
   body {
+      display: flex;
+      flex-direction: column;
       min-height: 100vh;
+      font-size: 16px;
+      line-height: 30px;
+      color: $default;
+      @extend %dmsans-500;
+  }
+
+  .main {
+    flex-grow: 1;
+  }
+
+  .container {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .container-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  a {
+    font-size: 14px;
+    line-height: 24px;
+    color: $link-color;
   }
