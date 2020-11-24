@@ -348,8 +348,54 @@
     .info__item-img {
         margin: 12px 25px 0 0;
     }
+}
 
+.design {
+    padding: 100px 0 120px;
+    @extend %dmsans-700;
 
+    &__filter-btn {
+        text-align: center;
+        margin-bottom: 75px;
+    }
+
+    &__btn {    
+        border: none;
+        background-color: transparent;
+        color: $filter-btn;
+        cursor: pointer;
+        transition: all 0.7s;
+    }
+
+    &__btn + .design__btn {
+        margin-left: 20px;
+    }
+
+    &__items {
+        display: grid;
+        min-height: 525px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 30px;
+        row-gap: 35px;
+    }
+
+    &__item-title {
+        font-size: 20px;
+        color: $title;
+        max-width: 210px;
+        padding: 40px 0 0 35px;
+    }
+
+    &__item-subtitle {
+        color: #a3bbc8;
+        padding: 10px 0 0 35px;
+        
+    }
+
+    .mixitup-control-active {
+        color: $title;
+    }
 }
 
 
