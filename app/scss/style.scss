@@ -2,6 +2,7 @@
 @import 'fonts';
 @import 'reset';
 @import 'global';
+@import 'libs';
 
 
 
@@ -179,6 +180,7 @@
         line-height: 21px;
         padding: 9px 20px 10px 15px;
         margin-left: -4px;
+        cursor: pointer;
         /* line-height: 22px;
         padding: 14px 20px 14px 15px;
         margin-left: -4px; */
@@ -207,6 +209,192 @@
             padding-left: 14px;
             border-left: 1px solid;
         }
+    }
+}
+
+
+.slider {
+    
+    &__inner {
+        background-color: $accent;
+    }
+
+    &__items {
+        padding: 220px 0 40px;
+        position: relative;
+
+        &::before {
+            content: url('../images/slider-ellips.png');
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -10%;
+        }
+    }
+
+
+    &__item  {
+        display: flex !important;
+        justify-content: space-between;
+    }
+
+    &__title {
+        max-width: 470px;
+        @extend %rubick-500;
+        font-size: 72px;
+        line-height: 70px;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+    }
+
+    &__text {
+        max-width: 370px;
+        @extend %rubick-400;
+        font-size: 18px;
+        line-height: 30px;
+        color: #436372;
+        margin-bottom: 40px;
+    }
+
+    &__btn {
+        padding: 20px 100px 20px 25px;
+        @extend %rubick-500;
+        font-size: 15px;
+        line-height: 12px;
+        color: #fff;
+        background-color: #a3bbc8;
+        position: relative;
+    }
+
+    &__img {
+        margin-top: 55px;
+    }
+
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        margin-top: 200px;
+        li {
+            button {
+                @extend %rubick-500;
+                font-size: 11px;
+                line-height: 9px;
+                color: $default;
+                width: 30px;
+                height: 30px;
+                background-color: #fff;
+                border: none;
+                border-radius: 50%;
+                opacity: 0.302;
+                transition: all 0.7s;
+                cursor: pointer;
+            }
+        }
+
+        .slick-active {
+            button {
+                opacity: 1;
+            }
+        }
+
+        li + li {
+            padding-left: 10px;
+        }
+    }
+}
+
+
+.info {
+
+    &__items {
+        display: flex;
+    }
+
+    &__item-support,
+    &__item-delivery,
+    &__item-payment {
+        padding: 45px 0;
+        display: flex;
+        justify-content: center;
+        background-color: #fef7f0;
+    }
+
+    &__item-support {
+        width: 570px;
+    }
+
+    &__item-delivery {
+        width: 600px;
+        border-left: 1px solid #e8e4df;
+        border-right: 1px solid #e8e4df;
+    }
+
+    &__item-payment {
+        width: 600px;
+    }
+
+    &__title {
+        font-size: 18px;
+        line-height: 40px;
+        @extend %dmsans-700;
+        color: #414141;
+    }
+
+    &__text {
+        color: #585858;
+        max-width: 230px;
+    }
+
+    .info__item-img {
+        margin: 12px 25px 0 0;
+    }
+}
+
+.design {
+    padding: 100px 0 120px;
+    @extend %dmsans-700;
+
+    &__filter-btn {
+        text-align: center;
+        margin-bottom: 75px;
+    }
+
+    &__btn {    
+        border: none;
+        background-color: transparent;
+        color: $filter-btn;
+        cursor: pointer;
+        transition: all 0.7s;
+    }
+
+    &__btn + .design__btn {
+        margin-left: 20px;
+    }
+
+    &__items {
+        display: grid;
+        min-height: 525px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 30px;
+        row-gap: 35px;
+    }
+
+    &__item-title {
+        font-size: 20px;
+        color: $title;
+        max-width: 210px;
+        padding: 40px 0 0 35px;
+    }
+
+    &__item-subtitle {
+        color: #a3bbc8;
+        padding: 10px 0 0 35px;
+        
+    }
+
+    .mixitup-control-active {
+        color: $title;
     }
 }
 
