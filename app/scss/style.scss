@@ -224,7 +224,7 @@
         position: relative;
 
         &::before {
-            content: url('../images/slider-ellips.png');
+            content: url('../images/icons/slider-ellips.png');
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
@@ -396,6 +396,16 @@
     .mixitup-control-active {
         color: $title;
     }
+}
+
+.video {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 
