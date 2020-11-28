@@ -224,7 +224,7 @@
         position: relative;
 
         &::before {
-            content: url('../images/slider-ellips.png');
+            content: url('../images/icons/slider-ellips.png');
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
@@ -350,34 +350,114 @@
     }
 }
 
+.product {
+    padding: 75px 0 170px;
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 45px 30px;
+    }
+}
+
+.product-item {
+    padding: 25px 0 35px;
+    max-width: 270px;
+    text-align: center;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    border-radius: 8px;
+
+    &__img-box {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 206px;
+        overflow: hidden;
+        margin-bottom: 55px;
+    }
+
+    &__link-box {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 12px;
+        left: 0;
+        right: 0;
+        transform: translateY(200%);
+        transition: all .7s;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 45px;
+        width: 45px;
+        background-color: #fff;
+        border-radius: 50%;
+        transition: all .7s;
+        
+        path {
+            transition: all .7s;
+        }
+    }
+
+    &__link:hover {
+        background-color: #a3bbc8;
+        path {
+            fill: #fff;
+        }
+    }
+
+    &__link + .product-item__link {
+        margin-left: 15px;
+    }
+
+    &__images {
+        object-fit: cover;
+    }
+
+    &:hover {
+        .product-item__link-box {
+            transform: translateY(0);
+        }
+    }
+
+    &__title {
+        font-weight: 500;
+        line-height: 24px;
+        margin-bottom: 5px;
+    }
+
+    &__price {
+        font-weight: 700;
+        color: #a3bbc8;
+    }
+}
+  
+
+
+
+
+
+
+
 .design {
     padding: 100px 0 120px;
     @extend %dmsans-700;
 
-    &__filter-btn {
-        text-align: center;
-        margin-bottom: 75px;
-    }
-
-    &__btn {    
-        border: none;
-        background-color: transparent;
-        color: $filter-btn;
-        cursor: pointer;
-        transition: all 0.7s;
-    }
-
-    &__btn + .design__btn {
-        margin-left: 20px;
-    }
-
     &__items {
         display: grid;
-        min-height: 525px;
+        /* min-height: 525px; */
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        /* grid-template-rows: repeat(2, 1fr); */
         column-gap: 30px;
         row-gap: 35px;
+    }
+
+    &__item-link {
+        height: 245px;
     }
 
     &__item-title {
@@ -392,10 +472,39 @@
         padding: 10px 0 0 35px;
         
     }
+}
+
+.filter{
+    text-align: center;
+    margin-bottom: 75px; //всюду будет отступ
+
+    &__btn {    
+        border: none;
+        background-color: transparent;
+        color: $filter-btn;
+        cursor: pointer;
+        transition: all 0.7s;
+    }
+
+    &__btn + .filter__btn {
+        margin-left: 20px;
+    }
 
     .mixitup-control-active {
         color: $title;
     }
+}
+
+
+
+.video {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 
