@@ -61,3 +61,14 @@
   text-align: center;
   margin-bottom: 25px; //все отступы вниз одинаковые будут
 }
+
+.partners {
+  padding: 60px 0;
+  background-color: #fef7f0;
+  &__items {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 100px;
+  }
+}
