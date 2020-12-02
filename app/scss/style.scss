@@ -661,7 +661,7 @@
 }
 
 .main-page__partners {
-    margin-top: -240px;
+    margin-top: -243px;
     padding: 255px 0 80px;
 }
 
@@ -696,7 +696,7 @@
     }
 }
 
-.filter{
+.slider-filter{
     text-align: center;
     margin-bottom: 75px; //всюду будет отступ
 
@@ -788,6 +788,81 @@
         padding: 20px 0;
         border: 2px solid #a3bbc8;
     }
+}
+
+.filter {
+    display: flex;
+    padding: 120px 0;
+
+    &__item {
+        width: 270px;
+    }
+
+    &__title {
+        display: inline-block;
+        @extend %dmsans-700;
+        font-size: 18px;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        padding-right: 50px;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 38px;
+            border-bottom: 3px solid #a3bbc8;
+            border-radius: 2px;
+        }
+    }
+}
+
+.filter-price {
+    &__range {
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        @extend %rubick-400;
+    }
+}
+
+.irs--flat {
+    height: 15px;
+}
+
+.irs--flat .irs-line {
+    top: 7px;
+    height: 3px;
+    background-color: #c2d2db;
+    border-radius: 2px;
+}
+
+.irs--flat .irs-bar {
+    top: 7px;
+    height: 3px;
+    background-color: #a3bbc8;
+}
+
+.irs--flat .irs-handle {
+    top: 0;
+    width: 15px;
+    height: 15px;
+    background-color: #a3bbc8;
+}
+
+.irs--flat .irs-handle>i:first-child {
+    display: none;
+}
+
+.irs--flat .irs-min, .irs--flat .irs-max {
+    display: none;
+}
+
+.irs-from, .irs-to, .irs-single {
+    display: none;
 }
 
 
