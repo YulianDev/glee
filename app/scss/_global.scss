@@ -72,3 +72,50 @@
       height: 100px;
   }
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @extend %rubick-400;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    padding: 0 8px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    border: 1px solid #a3bbc8;
+    color: $default;
+    font-size: 16px;
+  }
+
+  &__link--active {
+    background-color: #a3bbc8;
+    color: #fff;
+  }
+
+  &__next {
+    padding: 16px 20px;
+    border: 1px solid #a3bbc8;
+    font-size: 16px;
+    line-height: 1;
+    margin-left: 8px;
+    color: $default;
+  }
+}
+
+.pagination-list {
+  justify-content: flex-start;
+  .pagination__item:first-child {
+    padding-left: 0;
+  }
+}
