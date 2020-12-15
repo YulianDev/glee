@@ -740,25 +740,12 @@
         border-bottom: 1px solid #e0e0e0;
         padding-bottom: 15px;
         margin-bottom: 15px;
-    }
+    }  
+}
 
-    &__info {
-        display: flex;
-        align-items: center;
-    }
-    &__date {
-        margin-right: 30px;
-
-        &::before {
-            background-image: url('../images/icons/calendar-icon.png');
-            top: 7px;
-        }
-    }
-
-    &__author::before {
-        background-image: url('../images/icons/author-icon.png');
-        top: 5px;
-    }
+.blog-box {
+    display: flex;
+    align-items: center;
     &__date,
     &__author {
         @extend %rubick-400;
@@ -774,7 +761,22 @@
             width: 12px;
             height: 13px;
             left: 0;
+            background-repeat: no-repeat;
+            background-position: center;
         }
+    }
+    &__date {
+        margin-right: 30px;
+
+        &::before {
+            background-image: url('../images/icons/calendar-icon.png');
+            top: 7px;
+        }
+    }
+
+    &__author::before {
+        background-image: url('../images/icons/author-icon.png');
+        top: 5px;
     }
 }
 
@@ -1528,7 +1530,135 @@
             transform: rotate(180deg);
         }
     }
+}
 
+.blog-page {
+    padding: 120px 0;
+    @extend %rubick-400;
+
+    &__inner {
+        display: flex;
+    }
+
+    &__content {
+        width: 830px;
+        margin-right: 70px;
+    }
+
+    &__item {
+        margin-bottom: 50px;
+    }
+
+    &__item-box {
+        position: relative;
+        margin-bottom: 35px;
+    }
+
+    &__item-imglink {
+        display: block;
+    }
+
+    &__item-img {
+        max-width: 830px;
+        height: 500px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .blog-box {
+        width: 275px;
+        height: 70px;
+        padding: 0 30px;
+        font-size: 11px;
+        background-color: #a3bbc8;
+        color: #fff;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        &__author,
+        &__date {
+            color: inherit;
+            font-size: inherit;
+            padding-left: 15px;
+            &::before {
+                width: 10px;
+                height: 10px;
+            }
+        }
+
+        &__date::before {
+            background-image: url('../images/icons/calendar-icon.svg');
+            top: 9px;
+        }
+
+        &__author::before {
+            background-image: url('../images/icons/author-icon.svg');
+            top: 6px;
+        }
+    }
+
+    &__item-title {
+        font-weight: 400;
+        color: #333;
+        font-size: 36px;
+        margin-bottom: 35px;
+    }
+
+    &__item-titlelink {
+        color: inherit;
+        font-size: inherit;
+    }
+
+    &__item-link {
+        margin-top: 35px;
+        @extend %nunito-700;
+        font-size: 15px;
+        color: #a3bbc8;
+        display: inline-block;
+        padding: 20px 85px 25px 20px;
+        line-height: 1;
+        border: 1px solid #a3bbc8;
+        position: relative;
+    }
+
+    .arrow {
+        background-color:  #a3bbc8;
+        top: 27px;
+        &::after {
+            border-left-color: #a3bbc8;
+        }
+    }
+
+    &__aside {
+        width: 270px;
+    }
+
+}
+
+.filter-search {
+    display: flex;
+    margin-bottom: 50px;
+    &__input {
+        border: 2px solid #ebf1f3;
+        border-right: none;
+        border-radius: 4px;
+        height: 43px;
+        width: 100%;
+        outline: none;
+        padding: 10px;
+    }
+    &__btn {
+        border: none;
+        background-color:  #ebf1f3;
+        border-radius: 4px;
+        height: 43px;
+        width: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -5px;
+        cursor: pointer;
+    }
 }
 
 
