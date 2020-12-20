@@ -1910,7 +1910,7 @@
 
     &__form-mail::after {
         background-image: url('../images/icons/mail-blog-icon.svg');
-        height: 13px;
+        height: 12px;
         width: 18px;
     }
 
@@ -1957,6 +1957,7 @@
         color: #fff;
         border: none;
         background-color: #a3bbc8;
+        cursor: pointer;
     }
     
 }
@@ -1998,6 +1999,136 @@
         }
     }   
 }
+
+.contact {
+    padding: 110px 0 15px;
+    text-align: center;
+
+    &__write {
+        @extend %rubick-700;
+        color: #a3bbc8;
+    }
+
+    &__title {
+        font-size: 35px;
+        color: #436372;
+        margin-bottom: 60px;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 115px;
+    }
+
+    &__item {
+        padding: 70px 0 75px;
+        max-width: 370px;
+        width: 100%;
+        height: 380px;
+        background-color: #fbfbfb;
+        &:hover {
+            border: 3px solid #a3bbc8;
+            .contact__item-img {
+                background-color:#a3bbc8;
+            }
+            path {
+                fill: #fff;
+            }
+        }
+    }
+
+    &__item-img {
+        width: 80px;
+        height: 80px;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        margin: 0 auto;
+        margin-bottom: 60px;
+    }
+
+    &__item-title {
+        @extend %dmsans-700;
+        font-size: 20px;
+        color: #222;
+        margin-bottom: 20px;
+    }
+
+    &__item-text {
+        @extend %rubick-400;
+        color: #565872;
+    }
+
+    &__item-link {
+        font-size: 16px;
+        color: #565872;
+    }
+    
+    &__box {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__form {
+        width: 620px;
+    }
+
+    &__form-name,
+    &__form-mail {
+        max-width: 300px;  
+    }
+
+    &__form-name::after {
+        background-image: url('../images/icons/user-contact-icon.svg');
+    }
+
+    &__form-mail::after {
+        background-image: url('../images/icons/mail-contact-icon.svg');
+    }
+
+    &__form-answer::after {
+        background-image: url('../images/icons/answer-contact-icon.svg');
+    }
+
+    &__form-answer {
+        height: 175px;
+        margin-bottom: 30px;
+    }
+
+    &__form-input,
+    &__form-textarea {
+        background-color: #fafafa;
+        border: none;
+        &::placeholder {
+            text-transform: uppercase;
+            color: #565872;
+        }
+    }
+
+    &__form-btn {
+        display: block;
+        text-transform: uppercase;
+        border-radius: 4px;
+    }
+}
+
+#map {
+    width: 500px;
+    height: 335px;
+}
+
+.blog__title--blue,
+.blog__more--blue {
+    color: #436372;
+}
+
+.blog__more::after {
+    background-image: url('../images/icons/next-arrow-contact.svg');
+}
+    
 
 
 
