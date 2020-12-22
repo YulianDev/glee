@@ -353,6 +353,49 @@
     }
 }
 
+.terms {
+    padding: 115px 0 0 0;
+    @extend %rubick-400;
+
+    &__title{
+        @extend %rubick-500;
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
+    ol.terms__list {
+        counter-reset: counter;
+        padding-bottom: 30px;
+    }
+
+    &__item {
+        list-style: none;
+        padding-left: 40px;
+        position: relative;
+        margin-bottom: 30px;
+        
+        &::before {
+            content: '0' counter(counter) '.';
+            counter-increment: counter;
+            position: absolute;
+            left: 5px;
+        }
+
+        &:nth-child(n+10)::before {
+            content: counter(counter);
+            counter-increment: counter;
+        }
+    }
+
+    &__text {
+        margin-bottom: 60px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    
+}
 
 .info {
 
@@ -2128,6 +2171,8 @@
 .blog__more::after {
     background-image: url('../images/icons/next-arrow-contact.svg');
 }
+
+
     
 
 
