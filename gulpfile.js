@@ -52,7 +52,7 @@ function scripts() {
 //Работа с картинками
 function images() {
     return src('app/images/**/*.*')
-    .pipe(imagemin([   // custom option from npm imgMin doc
+    .pipe(imagemin([
         imagemin.gifsicle({interlaced: true}),
         imagemin.mozjpeg({quality: 75, progressive: true}),
         imagemin.optipng({optimizationLevel: 5}),
@@ -62,14 +62,21 @@ function images() {
                 {cleanupIDs: false}
             ]
         })
-    ]))
+    ]
+    ))
     .pipe(dest('dist/images'));
 }
+
+/* function fonts() {
+    return src ('app/fonts/**')
+    .pipe(dest('dist/fonts'));
+} */
 
 // Сборка
 function build() {
     return src([
         'app/**/*.html',
+        'app/fonts/**',
         'app/css/style.min.css',
         'app/js/main.min.js'
     ], {base: 'app'})
